@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Free 7-Day Reflection Guide — You Are Loved | Joelle Merschman</title>
+  <meta name="description" content="A free 7-day reflection guide for the days when faith feels complicated. Companion to the book You Are Loved by Joelle Merschman." />
+  <meta name="theme-color" content="#FBF7F1" />
+
+  <meta property="og:title" content="Free 7-Day Reflection Guide — You Are Loved" />
+  <meta property="og:description" content="When faith feels complicated, you are still deeply loved. Get the free 7-day reflection guide." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --coral:   #F26A5C;
+      --coral-2: #FF8E7A;
+      --gold:    #E8B14A;
+      --gold-2:  #F2C871;
+      --blush:   #F4C2B5;
+      --blush-2: #F8D7CE;
+      --plum:    #6B2D5C;
+      --plum-2:  #8B3A6F;
+      --cream:   #FBF7F1;
+      --ivory:   #F4EEE3;
+      --ink:     #2A1F2D;
+      --muted:   #6B5E64;
+      --line:    rgba(42, 31, 45, 0.12);
+      --shadow:  0 30px 80px -30px rgba(107, 45, 92, 0.35), 0 10px 30px -15px rgba(42, 31, 45, 0.18);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin: 0 0 0.5em;
+    }
+    p { margin: 0 0 1em; color: var(--ink); }
+
+    /* ---------- Geometric multicolor background ---------- */
+    .geo-bg {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      background-color: var(--blush-2);
+      background-image:
+        radial-gradient(closest-side at 18% 22%, var(--coral) 0%, transparent 62%),
+        radial-gradient(closest-side at 82% 14%, var(--gold) 0%, transparent 60%),
+        radial-gradient(closest-side at 88% 82%, var(--plum) 0%, transparent 65%),
+        radial-gradient(closest-side at 12% 88%, var(--coral-2) 0%, transparent 60%),
+        radial-gradient(closest-side at 50% 50%, var(--gold-2) 0%, transparent 55%),
+        conic-gradient(from 210deg at 50% 50%,
+          var(--coral) 0deg,
+          var(--gold) 80deg,
+          var(--blush) 160deg,
+          var(--plum-2) 240deg,
+          var(--coral-2) 320deg,
+          var(--coral) 360deg);
+      background-blend-mode: screen, screen, screen, screen, soft-light, normal;
+    }
+
+    /* Geometric facets — subtle triangular tessellation overlay */
+    .geo-bg::before {
+      content: "";
+      position: absolute; inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(60deg, rgba(255,255,255,0.08) 25%, transparent 25.5%, transparent 50%, rgba(255,255,255,0.08) 50.5%, rgba(255,255,255,0.08) 75%, transparent 75.5%),
+        linear-gradient(-60deg, rgba(42,31,45,0.06) 25%, transparent 25.5%, transparent 50%, rgba(42,31,45,0.06) 50.5%, rgba(42,31,45,0.06) 75%, transparent 75.5%);
+      background-size: 80px 140px, 80px 140px;
+      mix-blend-mode: overlay;
+      opacity: 0.55;
+    }
+
+    /* Soft luxury cream overlay — keeps the page premium and readable */
+    .geo-bg::after {
+      content: "";
+      position: absolute; inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse at 50% 40%, rgba(251, 247, 241, 0.55) 0%, rgba(251, 247, 241, 0.15) 45%, rgba(251, 247, 241, 0) 75%),
+        linear-gradient(180deg, rgba(251, 247, 241, 0.0) 0%, rgba(251, 247, 241, 0.35) 70%, var(--cream) 100%);
+    }
+
+    /* ---------- Layout ---------- */
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ---------- Top bar ---------- */
+    .topbar {
+      position: relative;
+      z-index: 2;
+      padding: 22px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .brand .dot { color: var(--coral); }
+    .topbar a.book-link {
+      font-size: 14px;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 2px;
+    }
+    .topbar a.book-link:hover { border-color: var(--plum); }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative;
+      padding: 40px 0 96px;
+    }
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 56px;
+      align-items: center;
+      padding-top: 40px;
+    }
+    .eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--plum);
+      background: rgba(251, 247, 241, 0.85);
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(107, 45, 92, 0.18);
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(38px, 5.4vw, 64px);
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--plum);
+      font-weight: 500;
+    }
+    .hero .lede {
+      font-size: 18px;
+      color: var(--ink);
+      max-width: 30em;
+      margin-bottom: 14px;
+    }
+    .hero ul.bullets {
+      list-style: none;
+      padding: 0;
+      margin: 18px 0 0;
+      display: grid;
+      gap: 8px;
+      max-width: 30em;
+    }
+    .hero ul.bullets li {
+      position: relative;
+      padding-left: 26px;
+      font-size: 15px;
+      color: var(--ink);
+    }
+    .hero ul.bullets li::before {
+      content: "";
+      position: absolute;
+      left: 0; top: 8px;
+      width: 14px; height: 14px;
+      border-radius: 4px;
+      background: linear-gradient(135deg, var(--coral), var(--gold));
+      transform: rotate(45deg);
+    }
+
+    /* Form card — the "luxury overlay" */
+    .form-card {
+      background: rgba(251, 247, 241, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      border-radius: 20px;
+      padding: 36px 32px 28px;
+      box-shadow: var(--shadow);
+    }
+    .form-card h2 {
+      font-size: 28px;
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+    .form-card .sub {
+      font-size: 14.5px;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+    .form-embed {
+      min-height: 360px;
+      border-radius: 12px;
+      background: #fff;
+      border: 1px dashed rgba(107, 45, 92, 0.28);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .form-embed > * { width: 100%; }
+    .form-embed .placeholder-note {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .form-embed .placeholder-note code {
+      background: var(--ivory);
+      padding: 2px 8px;
+      border-radius: 6px;
+      color: var(--plum);
+      font-size: 12.5px;
+    }
+    .form-card .fineprint {
+      margin-top: 14px;
+      font-size: 12.5px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* ---------- Section: What's inside ---------- */
+    .section {
+      padding: 96px 0;
+    }
+    .section.alt { background: var(--ivory); }
+    .section-head {
+      max-width: 720px;
+      margin: 0 auto 56px;
+      text-align: center;
+    }
+    .section-head .kicker {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--coral);
+      margin-bottom: 14px;
+    }
+    .section-head h2 {
+      font-size: clamp(30px, 3.6vw, 44px);
+      line-height: 1.15;
+    }
+    .section-head p {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .days {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+    .day {
+      background: var(--cream);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px 22px 24px;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .day:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px -18px rgba(107, 45, 92, 0.35);
+    }
+    .day .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px; height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--coral), var(--gold));
+      color: #fff;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+    .day h3 {
+      font-size: 22px;
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+    .day p {
+      font-size: 14.5px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* ---------- Book section ---------- */
+    .book {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .book-cover {
+      aspect-ratio: 2 / 3;
+      max-width: 360px;
+      margin: 0 auto;
+      border-radius: 8px;
+      background:
+        linear-gradient(140deg, rgba(255,255,255,0.18), rgba(255,255,255,0) 40%),
+        linear-gradient(160deg, var(--plum) 0%, var(--coral) 55%, var(--gold) 100%);
+      box-shadow: 0 30px 60px -25px rgba(42, 31, 45, 0.5), 0 10px 20px -10px rgba(42, 31, 45, 0.25);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 32px 26px;
+      color: #fff;
+    }
+    .book-cover .cover-tag {
+      font-size: 11px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      opacity: 0.85;
+    }
+    .book-cover .cover-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 38px;
+      line-height: 1.0;
+      font-weight: 600;
+    }
+    .book-cover .cover-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 18px;
+      opacity: 0.92;
+      margin-top: 6px;
+    }
+    .book-cover .cover-author {
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+    .book-cover::after {
+      content: "";
+      position: absolute;
+      inset: 10px;
+      border: 1px solid rgba(255,255,255,0.28);
+      border-radius: 4px;
+      pointer-events: none;
+    }
+
+    .book-copy h2 {
+      font-size: clamp(28px, 3.4vw, 40px);
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+    .book-copy .byline {
+      font-size: 13px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--coral);
+      margin-bottom: 16px;
+    }
+    .book-copy p {
+      color: var(--muted);
+      font-size: 16.5px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-weight: 500;
+      font-size: 15px;
+      text-decoration: none;
+      transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: var(--ink);
+      color: var(--cream);
+      box-shadow: 0 14px 30px -14px rgba(42,31,45,0.55);
+    }
+    .btn-primary:hover { transform: translateY(-1px); background: var(--plum); }
+    .btn-amazon {
+      background: linear-gradient(135deg, var(--coral), var(--gold));
+      color: #fff;
+      box-shadow: 0 14px 30px -14px rgba(242,106,92,0.6);
+    }
+    .btn-amazon:hover { transform: translateY(-1px); }
+    .btn .arrow { transition: transform .2s ease; }
+    .btn:hover .arrow { transform: translate(3px, -2px); }
+
+    .book-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 22px;
+    }
+    .book-actions .secondary {
+      font-size: 14px;
+      color: var(--muted);
+      align-self: center;
+    }
+
+    /* ---------- Author / closing ---------- */
+    .closing {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .closing blockquote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(22px, 2.6vw, 30px);
+      line-height: 1.35;
+      color: var(--ink);
+      margin: 0 0 24px;
+    }
+    .closing .signoff {
+      font-size: 13px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--coral);
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      padding: 36px 0 48px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    footer a { color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--line); }
+    footer a:hover { color: var(--ink); }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; padding-top: 16px; }
+      .hero { padding: 24px 0 72px; }
+      .book { grid-template-columns: 1fr; gap: 40px; }
+      .book-cover { max-width: 280px; }
+      .section { padding: 72px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============== HERO with geometric background ============== -->
+  <header class="geo-bg">
+    <div class="container topbar">
+      <a class="brand" href="/">Joelle Merschman<span class="dot">.</span></a>
+      <a class="book-link" href="https://www.amazon.com/dp/B0GX2XLSRZ" target="_blank" rel="noopener">The book on Amazon →</a>
+    </div>
+
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Free 7-Day Reflection Guide</span>
+          <h1>When faith feels complicated, <em>you are still loved.</em></h1>
+          <p class="lede">A gentle, beautifully designed 7-day reflection guide for the seasons when belief feels heavy, distant, or uncertain — written as a companion to the book <em>You Are Loved</em>.</p>
+
+          <ul class="bullets">
+            <li>One short reflection, scripture &amp; prompt per day</li>
+            <li>Designed to be read in under 5 minutes</li>
+            <li>Printable PDF — yours to keep</li>
+          </ul>
+        </div>
+
+        <aside class="form-card" id="get-the-guide">
+          <h2>Send me the guide</h2>
+          <p class="sub">Enter your email and we’ll deliver your free 7-day reflection guide to your inbox right away.</p>
+
+          <div class="form-embed" aria-label="Email signup form">
+            <!-- ============================================================
+                 GoHighLevel form embed
+                 Replace the placeholder block below with your GHL iframe
+                 snippet (Sites → Forms → "Embed Form" → "iframe").
+                 ============================================================ -->
+            {{GHL_FORM_EMBED}}
+            <div class="placeholder-note">
+              Paste your GoHighLevel form embed in place of <code>{{GHL_FORM_EMBED}}</code> in <code>index.html</code>.
+            </div>
+          </div>
+
+          <p class="fineprint">No spam. Unsubscribe anytime.</p>
+        </aside>
+      </div>
+    </section>
+  </header>
+
+  <!-- ============== What's inside ============== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">What’s inside</div>
+        <h2>Seven days of quiet, honest faith.</h2>
+        <p>Each day is a soft place to land — short enough for a busy morning, deep enough to sit with for a season.</p>
+      </div>
+
+      <div class="days">
+        <article class="day"><div class="num">1</div><h3>Begin Here</h3><p>Permission to come as you are — questions, doubts, and all.</p></article>
+        <article class="day"><div class="num">2</div><h3>When God Feels Far</h3><p>A reflection on presence in the silence.</p></article>
+        <article class="day"><div class="num">3</div><h3>Belovedness</h3><p>Returning to the truth underneath everything.</p></article>
+        <article class="day"><div class="num">4</div><h3>Holding Doubt Gently</h3><p>Faith that has room for honest questions.</p></article>
+        <article class="day"><div class="num">5</div><h3>Soft Surrender</h3><p>Letting go of the version of faith you outgrew.</p></article>
+        <article class="day"><div class="num">6</div><h3>Quiet Hope</h3><p>The slow, steady kind that doesn’t need to shout.</p></article>
+        <article class="day"><div class="num">7</div><h3>Carry This With You</h3><p>A blessing for the road, and what to do next.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Book / Amazon CTA ============== -->
+  <section class="section alt">
+    <div class="container">
+      <div class="book">
+        <div class="book-cover" aria-hidden="true">
+          <div class="cover-tag">Joelle Merschman</div>
+          <div>
+            <div class="cover-title">You Are Loved</div>
+            <div class="cover-sub">When faith feels complicated</div>
+          </div>
+          <div class="cover-author">A book for the in-between</div>
+        </div>
+
+        <div class="book-copy">
+          <div class="byline">The Book</div>
+          <h2>You Are Loved — for the days when faith feels complicated.</h2>
+          <p>If the reflection guide met you somewhere tender, the book goes deeper. <em>You Are Loved</em> is a warm, honest companion for anyone who has loved God and also wrestled with Him — and discovered that love was holding them through all of it.</p>
+          <p>Written by Joelle Merschman.</p>
+
+          <div class="book-actions">
+            <a class="btn btn-amazon" href="https://www.amazon.com/dp/B0GX2XLSRZ" target="_blank" rel="noopener">
+              Get it on Amazon <span class="arrow">↗</span>
+            </a>
+            <span class="secondary">Available in paperback &amp; Kindle</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Closing ============== -->
+  <section class="section">
+    <div class="container closing">
+      <blockquote>“You don’t have to have it all figured out to be deeply, completely loved.”</blockquote>
+      <div class="signoff">— Joelle</div>
+    </div>
+  </section>
+
+  <footer class="container">
+    <div>© <span id="y"></span> Joelle Merschman. All rights reserved.</div>
+    <div>
+      <a href="#get-the-guide">Get the free guide</a>
+      &nbsp;·&nbsp;
+      <a href="https://www.amazon.com/dp/B0GX2XLSRZ" target="_blank" rel="noopener">Buy the book</a>
+    </div>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
