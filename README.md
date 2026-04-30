@@ -20,7 +20,9 @@ sequence that ends with a soft Amazon CTA.
 │   ├── 02-day2-amazon-cta.md   # Day 2: Amazon book CTA
 │   ├── 03-nurture-day4.md      # Day 4: "When God Feels Far"
 │   ├── 04-nurture-day7.md      # Day 7: "Holding Doubt Gently"
-│   └── 05-nurture-day10.md     # Day 10: "Soft Surrender" + final book nudge
+│   ├── 05-nurture-day10.md     # Day 10: "Soft Surrender" + final book nudge
+│   ├── 06-purchase-thank-you.md# Post-purchase: thank-you (purchaser branch)
+│   └── 07-review-request.md    # +7 days after purchase: Amazon review request
 └── devotional/
     └── outline.md              # 7-day reflection guide outline + design notes
 ```
@@ -77,12 +79,77 @@ In **Automation → Workflows → New Workflow**:
 | 10 | **Send Email** | `emails/05-nurture-day10.md` |
 | 11 | **Add Tag** | `nurture-complete` |
 
-Optional refinements:
+Add a **link-click trigger** on the Amazon URL (`https://www.amazon.com/dp/B0GX2XLSRZ`)
+that adds the tag `clicked-amazon-cta` for retargeting.
 
-- Add an **If/Else** branch after step 4: if the contact has tag `book-purchaser`,
-  skip the Amazon CTA emails and route them into a thank-you/review-request branch.
-- Add a **link-click trigger** on the Amazon URL (`https://www.amazon.com/dp/B0GX2XLSRZ`)
-  that adds the tag `clicked-amazon-cta` for retargeting.
+### 3a. Post-purchase branch (If/Else)
+
+Once a contact is tagged `book-purchaser`, route them out of the Amazon CTA
+nurture and into a thank-you + review-request flow.
+
+**Where the tag comes from.** Amazon doesn't expose buyer data, so
+`book-purchaser` is added one of three ways:
+
+1. **Self-report link.** In Email 2 (Amazon CTA), include a small line like
+   *"Already grabbed it? [Tap here so I can say thank you →]"* pointing to a
+   GHL trigger link that adds the `book-purchaser` tag.
+2. **Manual tag** when readers reply to say they bought it.
+3. **Zap / webhook** if you sell signed copies through Shopify / Stripe / etc.
+
+**Workflow shape:**
+
+```
+Trigger: tag added "lead-magnet-devotional"
+   │
+   ▼
+[Email 1] Welcome + deliver PDF
+   │
+   ▼
+Wait 2 days
+   │
+   ▼
+If/Else  ── has tag "book-purchaser"? ──┐
+   │ NO                                  │ YES
+   ▼                                     ▼
+[Email 2] Amazon CTA              [Email 6] Thank-you
+   │                                     │
+   ▼                                     ▼
+Wait 2 days                       Wait 7 days
+   │                                     │
+   ▼                                     ▼
+[Email 3] Nurture day 4           [Email 7] Review request
+   │                                     │
+   ▼                                     ▼
+Wait 3 days                       Add tag: purchase-flow-complete
+   │                                    (end)
+   ▼
+[Email 4] Nurture day 7
+   │
+   ▼
+Wait 3 days
+   │
+   ▼
+[Email 5] Soft surrender + final nudge
+   │
+   ▼
+Add tag: nurture-complete
+(end)
+```
+
+**Bonus: catching late purchasers.**
+Create a second small workflow:
+
+| Step | Action | Configuration |
+|------|--------|---------------|
+| 1 | **Trigger** | Tag added: `book-purchaser` |
+| 2 | **Goal / Remove from workflow** | Remove contact from the main lead-magnet workflow |
+| 3 | **Send Email** | `emails/06-purchase-thank-you.md` |
+| 4 | **Wait** | 7 days |
+| 5 | **Send Email** | `emails/07-review-request.md` |
+| 6 | **Add Tag** | `purchase-flow-complete` |
+
+This way, if someone buys the book on day 5 of the nurture, they're pulled out
+of the CTA emails and sent down the purchaser path instead — no double-asking.
 
 ---
 
