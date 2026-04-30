@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Free Chapter — You Are Loved</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<main class="narrow">
+  <div class="prism-medallion" aria-hidden="true"></div>
+
+  <p class="eyebrow">Free chapter from <em>You Are Loved</em></p>
+  <h1>The first chapter is yours.</h1>
+  <span class="gold-bar" aria-hidden="true"></span>
+  <p class="muted" style="font-size:19px;">Tell me where to send it. I'll email it to you in the next minute or two — no fluff, no follow-up storm. Just the chapter.</p>
+
+  <form class="form" onsubmit="event.preventDefault(); window.location.href='thank-you.html';">
+    <div class="field">
+      <label for="first_name">What should I call you?</label>
+      <input id="first_name" name="first_name" type="text" required autocomplete="given-name" placeholder="First name">
+    </div>
+    <div class="field">
+      <label for="email">Where should I send it?</label>
+      <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+    </div>
+    <button type="submit" class="btn btn-primary">Send Me the Chapter →</button>
+  </form>
+
+  <p class="tiny" style="margin-top:24px; max-width:480px; margin-left:auto; margin-right:auto;">
+    I'll add you to occasional notes from Joelle. Unsubscribe anytime, in one click. I will never sell your email — that's a real promise, not a checkbox.
+  </p>
+
+  <p class="small" style="margin-top:48px;">
+    Already read it? <a href="#">Get the paperback on Amazon →</a>
+  </p>
+</main>
+
+</body>
+</html>
