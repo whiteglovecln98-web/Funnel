@@ -1,5 +1,7 @@
 # Local SEO Analysis — janesvillejanitorial.com
 
+> **Update 2026-11-09:** the brands are being separated (Janesville Janitorial = WI, White Glove Cleaning = IL). The schema and action #1 below reflect that. The full plan is in the "Website Split Brief for WTI" doc.
+
 **Audited:** 2026-11-09 · **Entry URL:** whiteglovecleaningandjanitorialservices.com (redirects to janesvillejanitorial.com) · **Platform:** WordPress 7.1.4 + Yoast SEO · **Pages reviewed:** 13
 
 ## Local SEO Score: 35/100
@@ -100,21 +102,16 @@ Put this in the homepage via Yoast → Schema, or a header-code plugin. **Replac
   "@type": "LocalBusiness",
   "@id": "https://janesvillejanitorial.com/#localbusiness",
   "name": "Janesville Janitorial",
-  "alternateName": "White Glove Cleaning",
-  "description": "Commercial cleaning and janitorial services for offices, medical facilities and manufacturing plants in southern Wisconsin and northern Illinois since 1998.",
+  "description": "Commercial cleaning and janitorial services for offices, medical facilities and manufacturing plants in southern Wisconsin since 1998.",
   "url": "https://janesvillejanitorial.com/",
-  "telephone": "+1-815-742-8100",
+  "telephone": "[+1-608 new number]",
   "email": "Joelle@JanesvilleJanitorial.com",
   "logo": "https://janesvillejanitorial.com/wp-content/uploads/2026/07/janesville_logo_badge.png",
   "image": "https://janesvillejanitorial.com/wp-content/uploads/2026/07/janesville_logo_badge.png",
   "foundingDate": "1998",
   "priceRange": "$$",
-  "parentOrganization": { "@type": "Organization", "name": "White Glove Cleaning" },
   "areaServed": [
-    "Janesville, WI", "Beloit, WI", "Milton, WI",
-    "Rockford, IL", "Loves Park, IL", "Machesney Park, IL", "Belvidere, IL",
-    "Roscoe, IL", "Rockton, IL", "Cherry Valley, IL", "Winnebago, IL",
-    "Freeport, IL", "Dixon, IL"
+    "Janesville, WI", "Beloit, WI", "Milton, WI"
   ],
   "openingHoursSpecification": [{
     "@type": "OpeningHoursSpecification",
@@ -136,8 +133,7 @@ Put this in the homepage via Yoast → Schema, or a header-code plugin. **Replac
   "sameAs": [
     "[YOUR GOOGLE BUSINESS PROFILE URL]",
     "[ONE CORRECT FACEBOOK URL]",
-    "https://www.linkedin.com/company/janesvillejanitorial/",
-    "https://www.tiktok.com/@whiteglovecln_"
+    "https://www.linkedin.com/company/janesvillejanitorial/"
   ]
 }
 ```
@@ -149,7 +145,7 @@ Only add `aggregateRating` once you display real Google review numbers on the pa
 
 | # | Priority | Action | Why it matters for revenue |
 |---|---|---|---|
-| 1 | Critical | **Pick one public name** and make the site, GBP, Facebook and schema match exactly. Recommended: "Janesville Janitorial", with "a division of White Glove Cleaning" as a tagline only | Split identity means split rankings, which means fewer walkthrough calls |
+| 1 | Critical | **Split the brands fully**: Janesville Janitorial = Wisconsin, White Glove Cleaning = northern Illinois, each with its own site, phone, email and GBP. See the "Website Split Brief for WTI" doc | Shared identity across two GBPs risks a duplicate-listing suspension |
 | 2 | Critical | Add a **Google rating badge plus a "Leave a review" link** to the homepage, the reviews page and the post-service email | Reviews make up ~20% of the map-pack ranking weight, and they're what property managers check first |
 | 3 | Critical | **Start a review cadence**: ask every recurring account after 30 days of service and after every strip & wax job. Goal: 2 per month, every month | A few weeks with no new reviews can cost you rankings; steadier competitors hold |
 | 4 | High | Change the homepage H1 to **"Commercial Cleaning & Janitorial Services in Janesville, Beloit & Rockford"** and keep "One Call. One Solution." as the subheading | Free ranking signal on your strongest page |
